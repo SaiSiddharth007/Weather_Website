@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherNow App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌦️ WeatherNow</h1>
+      <div class="toggle">
+        <button id="unit-toggle">°C / °F</button>
+        <button id="mode-toggle">🌙 / ☀️</button>
+      </div>
+    </header>
+
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="searchBtn">Search</button>
+      <button id="geoBtn">📍 Use My Location</button>
+    </div>
+
+    <div class="weather-card hidden" id="weatherCard">
+      <h2 id="location"></h2>
+      <div class="temp" id="temperature"></div>
+      <div class="desc" id="description"></div>
+      <img id="icon" alt="Weather icon" />
+      <div class="details">
+        <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+        <p><strong>Wind:</strong> <span id="wind"></span></p>
+        <p><strong>Pressure:</strong> <span id="pressure"></span></p>
+      </div>
+    </div>
+
+    <div class="loading hidden" id="loading">Loading...</div>
+    <div class="error hidden" id="errorMsg">❌ Couldn't fetch weather data.</div>
+  </div>
+</body>
+</html>
